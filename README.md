@@ -7,11 +7,23 @@ Professional cabinet design application MVP with 3D visualization, parametric de
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![Three.js](https://img.shields.io/badge/Three.js-Latest-orange)
 
+## 📋 Quick Links
+
+- 🚀 **[How to Open/Run This Application](#-new-user-start-here)** ← Start here if you just want to run it!
+- 📖 [QUICKSTART.md](./QUICKSTART.md) - Complete beginner guide
+- 📊 [HOW-TO-OPEN.md](./HOW-TO-OPEN.md) - Visual flowchart
+- ✨ [Features](#features)
+- 🛠️ [Tech Stack](#tech-stack)
+- 📱 [Usage Guide](#usage)
+- ⌨️ [Keyboard Shortcuts](#keyboard-shortcuts)
+
 ---
 
 ## 🚀 **NEW USER? START HERE!**
 
 **👉 [See QUICKSTART.md for a complete beginner-friendly guide](./QUICKSTART.md)**
+
+**👉 [See HOW-TO-OPEN.md for a visual flowchart guide](./HOW-TO-OPEN.md)**
 
 Or follow these 3 quick steps:
 
