@@ -2,7 +2,7 @@
   "name": "cabinet-design-pro",
   "version": "1.0.0",
   "description": "Professional cabinet design application with 3D visualization",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",

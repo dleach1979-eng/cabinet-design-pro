@@ -21,17 +21,29 @@ const server = http.createServer((req, res) => {
     filePath = './index.html';
   }
 
-  const extname = String(path.extname(filePath)).toLowerCase();
+  // Prevent path traversal attacks
+  const normalizedPath = path.normalize(filePath);
+  const resolvedPath = path.resolve(normalizedPath);
+  const baseDir = path.resolve('.');
+  
+  if (!resolvedPath.startsWith(baseDir)) {
+    res.writeHead(403, { 'Content-Type': 'text/html' });
+    res.end('<h1>403 - Forbidden</h1>', 'utf-8');
+    return;
+  }
+
+  const extname = String(path.extname(normalizedPath)).toLowerCase();
   const contentType = mimeTypes[extname] || 'application/octet-stream';
 
-  fs.readFile(filePath, (error, content) => {
+  fs.readFile(normalizedPath, (error, content) => {
     if (error) {
       if (error.code === 'ENOENT') {
         res.writeHead(404, { 'Content-Type': 'text/html' });
         res.end('<h1>404 - File Not Found</h1>', 'utf-8');
       } else {
+        console.error('Server error:', error);
         res.writeHead(500);
-        res.end('Sorry, check with the site admin for error: ' + error.code + ' ..\n');
+        res.end('<h1>500 - Internal Server Error</h1>', 'utf-8');
       }
     } else {
       res.writeHead(200, { 'Content-Type': contentType });

@@ -8,14 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (getStartedBtn) {
         getStartedBtn.addEventListener('click', () => {
-            alert('Welcome to Cabinet Design Pro! The design tools are coming soon.');
             console.log('Get Started button clicked');
+            // TODO: Implement design tools interface
         });
     }
-    
-    // Add animation to feature cards
-    const featureCards = document.querySelectorAll('.feature-card');
-    featureCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-    });
 });

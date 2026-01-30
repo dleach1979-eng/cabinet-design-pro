@@ -45,7 +45,7 @@ cabinet-design-pro/
 
 ## Requirements
 
-- Node.js 12.0 or higher
+- Node.js 18.0 or higher (LTS version recommended)
 
 ## License
 
