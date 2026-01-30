@@ -1,0 +1,19 @@
+{
+  "name": "cabinet-design-pro",
+  "version": "1.0.0",
+  "description": "Professional cabinet design application with 3D visualization",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cabinet",
+    "design",
+    "3d",
+    "visualization"
+  ],
+  "author": "",
+  "license": "ISC"
+}
