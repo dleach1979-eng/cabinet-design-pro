@@ -6,8 +6,21 @@ Professional cabinet design application with 3D visualization
 
 ### Installation
 
-1. Clone the repository
-2. Install dependencies (none required for now - uses Node.js built-in modules)
+1. Clone the repository:
+   ```bash
+   # Using HTTPS
+   git clone https://github.com/dleach1979-eng/cabinet-design-pro.git
+   
+   # Or using SSH
+   git clone git@github.com:dleach1979-eng/cabinet-design-pro.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd cabinet-design-pro
+   ```
+
+3. Install dependencies (none required for now - uses Node.js built-in modules)
 
 ### Development
 
