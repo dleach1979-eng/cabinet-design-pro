@@ -7,6 +7,28 @@ Professional cabinet design application MVP with 3D visualization, parametric de
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![Three.js](https://img.shields.io/badge/Three.js-Latest-orange)
 
+---
+
+## 🚀 **NEW USER? START HERE!**
+
+**👉 [See QUICKSTART.md for a complete beginner-friendly guide](./QUICKSTART.md)**
+
+Or follow these 3 quick steps:
+
+1. **Install dependencies** (first time only):
+   ```bash
+   npm install
+   ```
+
+2. **Start the application**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Open in your browser**: Go to **http://localhost:5173**
+
+---
+
 ## Features
 
 - **3D Visualization**: Real-time 3D rendering with Three.js and React Three Fiber
@@ -30,23 +52,81 @@ Professional cabinet design application MVP with 3D visualization, parametric de
 
 ### Prerequisites
 
-- Node.js 18+ and npm
+- **Node.js 18+** and **npm** (comes with Node.js)
+  - Check if installed: `node --version` and `npm --version`
+  - Download from: [nodejs.org](https://nodejs.org/)
 
-### Installation
+### Step-by-Step Installation & Running
 
+#### 1️⃣ Navigate to the project directory
 ```bash
-# Install dependencies
+cd cabinet-design-pro
+```
+
+#### 2️⃣ Install dependencies (first time only)
+```bash
 npm install
 ```
+This will download all required packages (~50MB). Takes about 1-2 minutes.
+
+#### 3️⃣ Start the development server
+```bash
+npm run dev
+```
+You'll see output like:
+```
+VITE v7.3.1  ready in 199 ms
+
+➜  Local:   http://localhost:5173/
+➜  Network: use --host to expose
+```
+
+#### 4️⃣ Open in your browser
+- **Automatic**: Some systems will auto-open your browser
+- **Manual**: Open your browser and go to **http://localhost:5173**
+
+#### 5️⃣ Start designing!
+- You'll see a 3D canvas with a grid floor
+- Use the toolbar at the top to add cabinets
+- Click on cabinets to select and edit them
 
 ### Development
 
+**Running the development server:**
 ```bash
 # Start development server
 npm run dev
 ```
 
 The application will be available at `http://localhost:5173`
+
+**To stop the server:** Press `Ctrl+C` in the terminal
+
+### Troubleshooting
+
+**Port already in use?**
+```bash
+# Kill the process using port 5173
+# On Linux/Mac:
+lsof -ti:5173 | xargs kill -9
+# On Windows:
+netstat -ano | findstr :5173
+taskkill /PID <PID> /F
+```
+
+**Dependencies not installing?**
+```bash
+# Clear npm cache and try again
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+```
+
+**Application not loading?**
+- Make sure Node.js 18+ is installed
+- Check console for errors (F12 in browser)
+- Try clearing browser cache
+- Restart the dev server
 
 ### Build
 
