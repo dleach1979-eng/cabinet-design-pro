@@ -27,19 +27,24 @@ Professional cabinet design application MVP with 3D visualization, parametric de
 
 **👉 [See HOW-TO-OPEN.md for a visual flowchart guide](HOW-TO-OPEN.md)**
 
-Or follow these 3 quick steps:
+### Quick Start: Get the Dev Server Running in 3 Steps
 
-1. **Install dependencies** (first time only):
-   ```bash
-   npm install
-   ```
+> 💡 **Note:** You don't "install" the `npm run dev` script - it's already in package.json. You need to install the *dependencies* first, then you can *run* the script!
 
-2. **Start the application**:
-   ```bash
-   npm run dev
-   ```
+**Step 1: Install Dependencies** (first time only - this downloads all required packages)
+```bash
+npm install
+```
+This installs Vite, React, Three.js, and other dependencies (~270 packages, takes 1-2 minutes).
 
-3. **Open in your browser**: Go to **http://localhost:5173**
+**Step 2: Run the Development Server** (use this command every time you want to start the app)
+```bash
+npm run dev
+```
+This starts the Vite development server. You'll see: `Local: http://localhost:5173/`
+
+**Step 3: Open Your Browser**
+Navigate to **http://localhost:5173** - you should see the Cabinet Design Pro application!
 
 <details>
 <summary><strong>📖 Click here for detailed step-by-step instructions</strong></summary>
@@ -110,6 +115,46 @@ npm install
 - Restart the dev server
 
 </details>
+
+---
+
+## ❓ Frequently Asked Questions
+
+### How do I install the `npm run dev` script?
+
+**Short answer:** You don't install scripts - they're already defined in `package.json`. You need to install the **dependencies** first:
+
+```bash
+# Install dependencies (first time only)
+npm install
+
+# Run the dev script (every time you want to start the app)
+npm run dev
+```
+
+**What's the difference?**
+- `npm install` - Downloads and installs all the packages your project needs (like React, Vite, Three.js)
+- `npm run dev` - Runs the development server using the packages you installed
+
+Think of it like this:
+1. `npm install` = Installing the ingredients
+2. `npm run dev` = Cooking the meal with those ingredients
+
+### Do I need to run `npm install` every time?
+
+**No!** Only run `npm install`:
+- The first time you clone the project
+- After you pull changes that update `package.json`
+- If you delete the `node_modules` folder
+
+After that, just use `npm run dev` to start the server!
+
+### What if I get "command not found" errors?
+
+Make sure you:
+1. Have Node.js 18+ installed: `node --version`
+2. Are in the project directory: `cd cabinet-design-pro`
+3. Have run `npm install` first
 
 ---
 
