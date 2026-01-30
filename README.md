@@ -10,8 +10,8 @@ Professional cabinet design application MVP with 3D visualization, parametric de
 ## 📋 Quick Links
 
 - 🚀 **[How to Open/Run This Application](#-new-user-start-here)** ← Start here if you just want to run it!
-- 📖 [QUICKSTART.md](./QUICKSTART.md) - Complete beginner guide
-- 📊 [HOW-TO-OPEN.md](./HOW-TO-OPEN.md) - Visual flowchart
+- 📖 [QUICKSTART.md](QUICKSTART.md) - Complete beginner guide
+- 📊 [HOW-TO-OPEN.md](HOW-TO-OPEN.md) - Visual flowchart
 - ✨ [Features](#features)
 - 🛠️ [Tech Stack](#tech-stack)
 - 📱 [Usage Guide](#usage)
@@ -21,9 +21,11 @@ Professional cabinet design application MVP with 3D visualization, parametric de
 
 ## 🚀 **NEW USER? START HERE!**
 
-**👉 [See QUICKSTART.md for a complete beginner-friendly guide](./QUICKSTART.md)**
+> **Note:** If the links below show "not found", you may be viewing the main branch. These guides are available in the latest updates. You can also follow the 3-step quick start below!
 
-**👉 [See HOW-TO-OPEN.md for a visual flowchart guide](./HOW-TO-OPEN.md)**
+**👉 [See QUICKSTART.md for a complete beginner-friendly guide](QUICKSTART.md)**
+
+**👉 [See HOW-TO-OPEN.md for a visual flowchart guide](HOW-TO-OPEN.md)**
 
 Or follow these 3 quick steps:
 
@@ -38,6 +40,76 @@ Or follow these 3 quick steps:
    ```
 
 3. **Open in your browser**: Go to **http://localhost:5173**
+
+<details>
+<summary><strong>📖 Click here for detailed step-by-step instructions</strong></summary>
+
+### Detailed Installation Guide
+
+#### Prerequisites
+- **Node.js 18+** and **npm** (comes with Node.js)
+  - Check if installed: `node --version` and `npm --version`
+  - Download from: [nodejs.org](https://nodejs.org/)
+
+#### Step 1: Navigate to the project directory
+```bash
+cd cabinet-design-pro
+```
+
+#### Step 2: Install dependencies (first time only)
+```bash
+npm install
+```
+This will download all required packages (~50MB). Takes about 1-2 minutes.
+
+#### Step 3: Start the development server
+```bash
+npm run dev
+```
+You'll see output like:
+```
+VITE v7.3.1  ready in 199 ms
+
+➜  Local:   http://localhost:5173/
+➜  Network: use --host to expose
+```
+
+#### Step 4: Open in your browser
+- **Automatic**: Some systems will auto-open your browser
+- **Manual**: Open your browser and go to **http://localhost:5173**
+
+#### Step 5: Start designing!
+- You'll see a 3D canvas with a grid floor
+- Use the toolbar at the top to add cabinets
+- Click on cabinets to select and edit them
+
+### Troubleshooting
+
+**Port already in use?**
+```bash
+# Kill the process using port 5173
+# On Linux/Mac:
+lsof -ti:5173 | xargs kill -9
+# On Windows:
+netstat -ano | findstr :5173
+taskkill /PID <PID> /F
+```
+
+**Dependencies not installing?**
+```bash
+# Clear npm cache and try again
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+```
+
+**Application not loading?**
+- Make sure Node.js 18+ is installed
+- Check console for errors (F12 in browser)
+- Try clearing browser cache
+- Restart the dev server
+
+</details>
 
 ---
 
