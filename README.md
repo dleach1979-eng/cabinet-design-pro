@@ -20,7 +20,7 @@ Professional cabinet design application with 3D visualization
    ```bash
    npm install
    ```
-   Note: This project uses Node.js built-in modules, so no external dependencies are needed. However, running `npm install` is still required to set up the project.
+   Note: This project uses Node.js built-in modules only. Running `npm install` initializes the project and creates a package-lock.json file for consistent setup across environments.
 
 ### Development
 
@@ -40,7 +40,8 @@ The application will be available at `http://localhost:3000`
 - Ensure port 3000 is not already in use
 
 **Problem: "Port 3000 is already in use"**
-- Stop any other process using port 3000, or modify the PORT in server.js
+- Stop any other process using port 3000
+- Or use a different port: `PORT=3001 npm run dev`
 
 ### Available Scripts
 
