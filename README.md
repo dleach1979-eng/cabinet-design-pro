@@ -4,10 +4,23 @@ Professional cabinet design application with 3D visualization
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js 18.0 or higher (LTS version recommended)
+
 ### Installation
 
-1. Clone the repository
-2. Install dependencies (none required for now - uses Node.js built-in modules)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dleach1979-eng/cabinet-design-pro.git
+   cd cabinet-design-pro
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+   Note: This project uses Node.js built-in modules only. Running `npm install` initializes the project and creates a package-lock.json file for consistent setup across environments.
 
 ### Development
 
@@ -18,6 +31,17 @@ npm run dev
 ```
 
 The application will be available at `http://localhost:3000`
+
+### Troubleshooting
+
+**Problem: "npm run dev" doesn't work**
+- Make sure you've run `npm install` first
+- Check that Node.js 18.0 or higher is installed: `node --version`
+- Ensure port 3000 is not already in use
+
+**Problem: "Port 3000 is already in use"**
+- Stop any other process using port 3000
+- Or use a different port: `PORT=3001 npm run dev`
 
 ### Available Scripts
 
@@ -43,9 +67,7 @@ cabinet-design-pro/
 └── README.md       # This file
 ```
 
-## Requirements
 
-- Node.js 18.0 or higher (LTS version recommended)
 
 ## License
 

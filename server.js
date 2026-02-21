@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const mimeTypes = {
   '.html': 'text/html',
@@ -55,4 +55,21 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`🚀 Cabinet Design Pro development server running at http://localhost:${PORT}/`);
   console.log('Press Ctrl+C to stop the server');
+});
+
+server.on('error', (error) => {
+  if (error.code === 'EADDRINUSE') {
+    console.error(`❌ Error: Port ${PORT} is already in use.`);
+    console.error(`   Please stop the other process or set a different port:`);
+    console.error(`   PORT=3001 npm run dev`);
+    process.exit(1);
+  } else if (error.code === 'EACCES') {
+    console.error(`❌ Error: Permission denied to use port ${PORT}.`);
+    console.error(`   Try using a port number above 1024:`);
+    console.error(`   PORT=3001 npm run dev`);
+    process.exit(1);
+  } else {
+    console.error('❌ Server error:', error);
+    process.exit(1);
+  }
 });
